@@ -11,7 +11,7 @@ source:
   sha256: 49d2d97604fd8aae01cdd37298a724cb80dfdb1c28a7b6b396cc96b18cd94cda
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - askbot-setup = askbot.deployment:askbot_setup
@@ -63,8 +63,6 @@ test:
     - python -c "from django.conf import settings; settings.configure()"
     - python -c "import importlib.util; assert importlib.util.find_spec('askbot')"
     - askbot-setup --help
-  requires:
-    - pip
 
 about:
   home: http://askbot.org
