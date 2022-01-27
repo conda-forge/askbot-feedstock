@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - akismet ==1.0.1
     - beautifulsoup4 <=4.7.1
@@ -45,7 +45,7 @@ requirements:
     - mock ==3.0.5
     - oauth2 <=1.9.0.post1
     - pyjwt <=1.7.1
-    - python
+    - python >=3.6
     - python-cas >=1.4.0,<1.6
     - python-openid2 >=3.0
     - pytz
