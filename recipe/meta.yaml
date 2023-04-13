@@ -1,5 +1,5 @@
 {% set name = "askbot" %}
-{% set version = "0.11.4" %}
+{% set version = "0.11.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/askbot-{{ version }}.tar.gz
-  sha256: b711f9fa9efec6d74272c70833aebcb0e27f93a25c812f5b21683ad8d107ebd5
+  sha256: f2d4ae5bbea5cf4c64ee757a6932be849bfc8d011dcf25c7b8b1a39e2f3d43b8
 
 build:
   number: 0
