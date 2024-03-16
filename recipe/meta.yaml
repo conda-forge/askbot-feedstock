@@ -73,6 +73,9 @@ about:
   license: MIT AND LGPL-3.0-or-later AND BSD-3-Clause AND GPL-3.0-or-later AND Apache-2.0 AND BSD-2-Clause
   license_file:
     - LICENSE
+    - COPYING
+    - askbot/conf/license.py
+    - ThirdPartyLicenses.txt
 
 extra:
   recipe-maintainers:
