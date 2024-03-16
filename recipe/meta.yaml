@@ -1,7 +1,6 @@
 {% set name = "askbot" %}
 {% set version = "0.11.7" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -11,11 +10,11 @@ source:
   sha256: 1203312b0e6cd731dac69892c0159880483e75961a2720d98636bbc28aa7b5eb
 
 build:
-  number: 0
-  noarch: python
   entry_points:
     - askbot-setup = askbot.deployment:askbot_setup
-  script: {{ PYTHON }} -m pip install . -vv
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
@@ -68,9 +67,141 @@ about:
   home: http://askbot.org
   summary: Question and Answer forum, like StackOverflow, written in python and Django
   doc_url: https://pythonhosted.org/askbot/
-  license: BSD-3-Clause
-  license_file: LICENSE
+  license: MIT AND GPL-3.0 AND BSD-3-Clause AND GPL-3.0-or-later AND Apache-2.0 AND BSD-2-Clause
+  license_file:
+    - LICENSE
+    - COPYING
+    - askbot/conf/license.py
+    - askbot/media/node_modules/strip-json-comments/license
+    - askbot/media/node_modules/path-is-absolute/license
+    - askbot/media/node_modules/cross-spawn/LICENSE
+    - askbot/media/node_modules/type-fest/license
+    - askbot/media/node_modules/eslint/LICENSE
+    - askbot/media/node_modules/eslint/node_modules/eslint-visitor-keys/LICENSE
+    - askbot/media/node_modules/emoji-regex/LICENSE-MIT.txt
+    - askbot/media/node_modules/v8-compile-cache/LICENSE
+    - askbot/media/node_modules/readdirp/LICENSE
+    - askbot/media/node_modules/acorn-jsx/LICENSE
+    - askbot/media/node_modules/picomatch/LICENSE
+    - askbot/media/node_modules/binary-extensions/license
+    - askbot/media/node_modules/uri-js/LICENSE
+    - askbot/media/node_modules/which/LICENSE
+    - askbot/media/node_modules/@babel/helper-validator-identifier/LICENSE
+    - askbot/media/node_modules/@babel/code-frame/LICENSE
+    - askbot/media/node_modules/@babel/highlight/LICENSE
+    - askbot/media/node_modules/@babel/highlight/node_modules/ansi-styles/license
+    - askbot/media/node_modules/@babel/highlight/node_modules/escape-string-regexp/license
+    - askbot/media/node_modules/@babel/highlight/node_modules/color-name/LICENSE
+    - askbot/media/node_modules/@babel/highlight/node_modules/chalk/license
+    - askbot/media/node_modules/@babel/highlight/node_modules/supports-color/license
+    - askbot/media/node_modules/@babel/highlight/node_modules/color-convert/LICENSE
+    - askbot/media/node_modules/@babel/highlight/node_modules/has-flag/license
+    - askbot/media/node_modules/require-from-string/license
+    - askbot/media/node_modules/fs.realpath/LICENSE
+    - askbot/media/node_modules/callsites/license
+    - askbot/media/node_modules/levn/LICENSE
+    - askbot/media/node_modules/anymatch/LICENSE
+    - askbot/media/node_modules/lodash.merge/LICENSE
+    - askbot/media/node_modules/eslint-scope/LICENSE
+    - askbot/media/node_modules/eslint-scope/node_modules/estraverse/LICENSE.BSD
+    - askbot/media/node_modules/fast-deep-equal/LICENSE
+    - askbot/media/node_modules/text-table/LICENSE
+    - askbot/media/node_modules/progress/LICENSE
+    - askbot/media/node_modules/once/LICENSE
+    - askbot/media/node_modules/esprima/LICENSE.BSD
+    - askbot/media/node_modules/semver/LICENSE
+    - askbot/media/node_modules/concat-map/LICENSE
+    - askbot/media/node_modules/string-width/license
+    - askbot/media/node_modules/is-extglob/LICENSE
+    - askbot/media/node_modules/ansi-styles/license
+    - askbot/media/node_modules/lodash.truncate/LICENSE
+    - askbot/media/node_modules/yallist/LICENSE
+    - askbot/media/node_modules/normalize-path/LICENSE
+    - askbot/media/node_modules/punycode/LICENSE-MIT.txt
+    - askbot/media/node_modules/ansi-regex/license
+    - askbot/media/node_modules/globals/license
+    - askbot/media/node_modules/doctrine/LICENSE.esprima
+    - askbot/media/node_modules/doctrine/LICENSE
+    - askbot/media/node_modules/doctrine/LICENSE.closure-compiler
+    - askbot/media/node_modules/@humanwhocodes/object-schema/LICENSE
+    - askbot/media/node_modules/@humanwhocodes/config-array/LICENSE
+    - askbot/media/node_modules/functional-red-black-tree/LICENSE
+    - askbot/media/node_modules/flatted/LICENSE
+    - askbot/media/node_modules/slice-ansi/license
+    - askbot/media/node_modules/normalize.css/LICENSE.md
+    - askbot/media/node_modules/js-tokens/LICENSE
+    - askbot/media/node_modules/sass/LICENSE
+    - askbot/media/node_modules/astral-regex/license
+    - askbot/media/node_modules/esquery/license.txt
+    - askbot/media/node_modules/estraverse/LICENSE.BSD
+    - askbot/media/node_modules/escape-string-regexp/license
+    - askbot/media/node_modules/acorn/LICENSE
+    - askbot/media/node_modules/eslint-visitor-keys/LICENSE
+    - askbot/media/node_modules/deep-is/LICENSE
+    - askbot/media/node_modules/json-stable-stringify-without-jsonify/LICENSE
+    - askbot/media/node_modules/glob/LICENSE
+    - askbot/media/node_modules/strip-ansi/license
+    - askbot/media/node_modules/color-name/LICENSE
+    - askbot/media/node_modules/esutils/LICENSE.BSD
+    - askbot/media/node_modules/enquirer/LICENSE
+    - askbot/media/node_modules/shebang-command/license
+    - askbot/media/node_modules/inflight/LICENSE
+    - askbot/media/node_modules/sprintf-js/LICENSE
+    - askbot/media/node_modules/is-glob/LICENSE
+    - askbot/media/node_modules/balanced-match/LICENSE.md
+    - askbot/media/node_modules/chalk/license
+    - askbot/media/node_modules/lodash.clonedeep/LICENSE
+    - askbot/media/node_modules/optionator/LICENSE
+    - askbot/media/node_modules/lru-cache/LICENSE
+    - askbot/media/node_modules/braces/LICENSE
+    - askbot/media/node_modules/shebang-regex/license
+    - askbot/media/node_modules/prelude-ls/LICENSE
+    - askbot/media/node_modules/isexe/LICENSE
+    - askbot/media/node_modules/fast-levenshtein/LICENSE.md
+    - askbot/media/node_modules/ignore/LICENSE-MIT
+    - askbot/media/node_modules/is-number/LICENSE
+    - askbot/media/node_modules/@eslint/eslintrc/LICENSE
+    - askbot/media/node_modules/debug/LICENSE
+    - askbot/media/node_modules/fast-json-stable-stringify/LICENSE
+    - askbot/media/node_modules/json-schema-traverse/LICENSE
+    - askbot/media/node_modules/supports-color/license
+    - askbot/media/node_modules/path-key/license
+    - askbot/media/node_modules/regexpp/LICENSE
+    - askbot/media/node_modules/eslint-utils/LICENSE
+    - askbot/media/node_modules/parent-module/license
+    - askbot/media/node_modules/type-check/LICENSE
+    - askbot/media/node_modules/fill-range/LICENSE
+    - askbot/media/node_modules/glob-parent/LICENSE
+    - askbot/media/node_modules/flat-cache/LICENSE
+    - askbot/media/node_modules/is-fullwidth-code-point/license
+    - askbot/media/node_modules/ajv/LICENSE
+    - askbot/media/node_modules/chokidar/LICENSE
+    - askbot/media/node_modules/fsevents/LICENSE
+    - askbot/media/node_modules/color-convert/LICENSE
+    - askbot/media/node_modules/minimatch/LICENSE
+    - askbot/media/node_modules/brace-expansion/LICENSE
+    - askbot/media/node_modules/is-binary-path/license
+    - askbot/media/node_modules/wrappy/LICENSE
+    - askbot/media/node_modules/ms/license.md
+    - askbot/media/node_modules/has-flag/license
+    - askbot/media/node_modules/ansi-colors/LICENSE
+    - askbot/media/node_modules/inherits/LICENSE
+    - askbot/media/node_modules/rimraf/LICENSE
+    - askbot/media/node_modules/file-entry-cache/LICENSE
+    - askbot/media/node_modules/table/LICENSE
+    - askbot/media/node_modules/table/node_modules/json-schema-traverse/LICENSE
+    - askbot/media/node_modules/table/node_modules/ajv/LICENSE
+    - askbot/media/node_modules/js-yaml/LICENSE
+    - askbot/media/node_modules/espree/LICENSE
+    - askbot/media/node_modules/to-regex-range/LICENSE
+    - askbot/media/node_modules/import-fresh/license
+    - askbot/media/node_modules/argparse/LICENSE
+    - askbot/media/node_modules/word-wrap/LICENSE
+    - askbot/media/node_modules/resolve-from/license
+    - askbot/media/jslib/highlight/LICENSE
+    - askbot/media/tinymce/license.txt
 
 extra:
   recipe-maintainers:
     - mxr-conda
+    - rxm7706
