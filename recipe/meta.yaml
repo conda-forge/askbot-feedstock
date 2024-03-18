@@ -16,12 +16,13 @@ build:
   number: 1
 
 requirements:
+  build:
+    - nodejs >=18
+    - pnpm
+    - pnpm-licenses
   host:
     - pip
     - python >=3.6
-    - nodejs
-    - pnpm
-    - pnpm-licenses
   run:
     - akismet ==1.0.1
     - beautifulsoup4 ==4.7.1
