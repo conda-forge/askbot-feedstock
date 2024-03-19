@@ -75,7 +75,7 @@ about:
     - LICENSE
     - COPYING
     - askbot/conf/license.py
-    - ThirdPartyLicenses.txt
+    - askbot/media/ThirdPartyLicenses.txt
 
 extra:
   recipe-maintainers:
