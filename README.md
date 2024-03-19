@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/askbot-feedstoc
 
 Home: http://askbot.org
 
-Package license: BSD-3-Clause
+Package license: MIT AND LGPL-3.0-or-later AND BSD-3-Clause AND GPL-3.0-or-later AND Apache-2.0 AND BSD-2-Clause
 
 Summary: Question and Answer forum, like StackOverflow, written in python and Django
 
@@ -97,7 +97,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
@@ -146,4 +146,5 @@ Feedstock Maintainers
 =====================
 
 * [@mxr-conda](https://github.com/mxr-conda/)
+* [@rxm7706](https://github.com/rxm7706/)
 
