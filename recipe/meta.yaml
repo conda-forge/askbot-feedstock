@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/askbot-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/askbot-{{ version }}.tar.gz
   sha256: 1203312b0e6cd731dac69892c0159880483e75961a2720d98636bbc28aa7b5eb
 
 build:
   entry_points:
     - askbot-setup = askbot.deployment:askbot_setup
   noarch: python
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -22,7 +22,7 @@ requirements:
     - pnpm-licenses
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - akismet ==1.0.1
     - beautifulsoup4 ==4.7.1
@@ -46,7 +46,7 @@ requirements:
     - markdown2 <=2.3.9
     - oauth2 <=1.9.0.post1
     - pyjwt <=1.7.1
-    - python >=3.6
+    - python >={{ python_min }}
     - python_abi ==3.7
     - python-cas >=1.4.0,<1.6
     - python-openid2 ==3.2
@@ -58,6 +58,8 @@ requirements:
     - unidecode
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - askbot
     - askbot.bin
